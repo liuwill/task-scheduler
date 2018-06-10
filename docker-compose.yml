@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ci-redis:
+  task-redis:
     image: redis:4-alpine
     ports:
       - "6379:6379"
@@ -16,9 +16,9 @@ services:
     volumes:
       - ./:/usr/src/app
     environment:
-      - REDIS_HOST=ci-redis
+      - REDIS_HOST=task-redis
       - HTTP_AUTH_MODE=basic
       - AUTH_USER_NAME=${AUTH_USER_NAME}
       - AUTH_PASSWORD=${AUTH_PASSWORD}
     links:
-      - ci-redis
+      - task-redis

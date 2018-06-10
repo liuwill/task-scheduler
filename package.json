@@ -4,12 +4,12 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "NODE_ENV=production node bin/index.js",
     "deploy": "now -e NODE_ENV=production",
     "dev": "next",
     "build": "next build",
     "start:next": "next start",
-    "server": "NODE_ENV=production node server.js",
+    "server": "NODE_ENV=production node bin/index.js",
     "lint": "standard"
   },
   "keywords": [
