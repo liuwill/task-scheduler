@@ -8,7 +8,7 @@ const app = next({ dev })
 const handle = app.getRequestHandler()
 
 // const config = global.config = require('../src/configs')
-const { redis } = require('../src/utils/connections')
+const { redis } = require('./utils/connections')
 const jobHandles = require('../server/jobs/index')
 // const jobConfig = require('../server/jobs/config')
 const TaskMonitor = require('./cron')
