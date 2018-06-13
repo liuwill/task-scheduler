@@ -1,5 +1,5 @@
 apps:
-  - script : ./bin/index.js
+  - script : ./bin/server.js
     name: task-scheduler
     watch  : true
     env    :

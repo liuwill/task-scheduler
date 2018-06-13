@@ -1,6 +1,8 @@
 const Koa = require('koa')
 const next = require('next')
 const Router = require('koa-router')
+const compression = require('compression')
+const koaConnect = require('koa-connect')
 
 const port = parseInt(process.env.PORT, 10) || 3001
 const dev = process.env.NODE_ENV !== 'production'
@@ -18,6 +20,9 @@ app.prepare()
     const server = new Koa()
     const router = new Router()
     const taskMonitor = new TaskMonitor(redis)
+
+    // Enable gzip
+    server.use(koaConnect(compression()))
 
     router.get('/json', async ctx => {
       ctx.body = {
