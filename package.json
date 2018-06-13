@@ -6,7 +6,7 @@
   "scripts": {
     "start": "NODE_ENV=production node bin/server.js",
     "deploy": "now -e NODE_ENV=production",
-    "dev": "next",
+    "dev": "node bin/server.js",
     "build": "next build",
     "start:next": "next start",
     "server": "NODE_ENV=production node bin/server.js",
