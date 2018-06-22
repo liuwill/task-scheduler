@@ -111,6 +111,13 @@ body .ant-btn:hover {
   margin: 0;
   padding: 0;
 }
+.side-menu-title i {
+  margin-right: 5px;
+}
+.side-menu-list {
+  margin: 0;
+  padding: 0;
+}
 .side-menu-item {
   font-size: 14px;
   width: 100%;
@@ -126,9 +133,46 @@ body .ant-btn:hover {
   cursor: pointer;
   background: #eaf5ff;
   color: #5DADE2;
+  padding-left: 26px;
+  background-color: rgba(98,148,255,.06);
+}
+.side-menu-item.active {
+  cursor: pointer;
+  background: #eaf5ff;
+  color: #5DADE2;
   border-left: 4px solid #3D9BFC;
   padding-left: 26px;
   background-color: rgba(98,148,255,.06);
+}
+
+.side-submenu-arrow {
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: absolute;
+  top: 36%;
+  right: 16px;
+  width: 10px;
+  font-size: 12px;
+}
+.side-menu-group .side-menu-title {
+  position: relative;
+  user-select: none;
+}
+.side-submenu-group:hover .side-menu-title, .side-submenu-group:hover .side-submenu-title {
+  cursor: pointer;
+  color: #8e77f6;
+}
+.side-menu-group.open .side-submenu-arrow {
+  /* -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px); */
+}
+.side-menu-group.open .side-submenu-arrow::before {
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
 
 .item-link {
