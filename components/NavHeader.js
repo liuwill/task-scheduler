@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react' // eslint-disable-line
 
 export default class SidePanel extends Component {
 

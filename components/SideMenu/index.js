@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react' // eslint-disable-line
 import { Menu, Icon, Switch } from 'antd'
 const { SubMenu } = Menu
 
@@ -23,9 +23,7 @@ export default class SidePanel extends Component {
   render() {
     return (
       <div className="side-panel">
-        <div>
-          
-        </div>
+        <div></div>
         <div>
           {/* <Switch onChange={this.changeMode} /> Change Mode
           <span className="ant-divider" style={{ margin: '0 1em' }} /> */}
@@ -33,7 +31,7 @@ export default class SidePanel extends Component {
         </div>
 
         <Menu
-          style={{ width: "100%" }}
+          style={{ width: '100%' }}
           defaultSelectedKeys={['1']}
           defaultOpenKeys={['sub1']}
           mode={this.state.mode}

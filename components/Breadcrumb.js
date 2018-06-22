@@ -1,6 +1,5 @@
-import { Breadcrumb as AntdBreadcrumb, Icon } from 'antd';
-
-import React, { Component } from 'react'
+import React, { Component } from 'react' // eslint-disable-line
+import { Breadcrumb as AntdBreadcrumb, Icon } from 'antd'
 
 export default class Breadcrumb extends Component {
 

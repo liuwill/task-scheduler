@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react' // eslint-disable-line
 import SidePanel from '../components/SidePanel'
-import SideMenu from '../components/SideMenu'
+// import SideMenu from '../components/SideMenu'
 import NavHeader from '../components/NavHeader'
 import Layout from '../components/Layout'
 import TaskList from '../layouts/TaskList'
@@ -15,7 +15,7 @@ export default class Index extends Component {
     }
   }
 
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
       taskList: {}
@@ -27,19 +27,16 @@ export default class Index extends Component {
       params: {
         token: 12345
       }
-    })
-    .then((response) => {
+    }).then((response) => {
       return response.data
     }).then((responseData) => {
       this.setState((prevState, props) => ({
         taskList: responseData.data || {},
       }))
-
       return responseData.data
-    })
-    .catch((error) => {
+    }).catch((error) => {
       console.log(error)
-    });
+    })
   }
 
   componentDidMount() {

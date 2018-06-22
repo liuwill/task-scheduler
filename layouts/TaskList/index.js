@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react' // eslint-disable-line
 import Breadcrumb from '../../components/Breadcrumb'
 import TaskOperatorModal from './TaskOperatorModal'
-import { List, Avatar, notification, Icon, Modal, Button, Row, Col } from 'antd'
+import { List, notification, Icon, Button } from 'antd'
 
 export default class TaskList extends Component {
 
@@ -58,7 +58,7 @@ export default class TaskList extends Component {
       pageSize: 10,
       current: 1,
       total: taskListData.length,
-      onChange: (() => { }),
+      onChange: () => { },
     }
 
     return (
@@ -87,7 +87,12 @@ export default class TaskList extends Component {
               renderItem={item => (
                 <List.Item
                   key={item.title}
-                  actions={[<Button type="primary" size="small">日志</Button>, <Button size="small" onClick={()=>{this.handleClickOperation(item.id)}}>操作</Button>]}
+                  actions={[
+                    <Button type="primary" size="small">日志</Button>,
+                    <Button size="small"
+                      onClick={ () => { this.handleClickOperation(item.id) }}
+                    >操作</Button>
+                  ]}
                 >
                   <List.Item.Meta
                     avatar={

@@ -1,11 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react' // eslint-disable-line
 import { Modal, Button, Row, Col, Icon } from 'antd'
 
 export default class TaskOperatorModal extends Component {
-
-  constructor(props) {
-    super(props)
-  }
 
   render() {
     const { visible, handleCancel, handleOk, currentJob } = this.props

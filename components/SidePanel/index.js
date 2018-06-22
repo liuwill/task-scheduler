@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-import { Menu, Icon, Switch } from 'antd'
-const { SubMenu } = Menu
+import React, { Component } from 'react' // eslint-disable-line
+import { Icon } from 'antd'
 
 export default class SidePanel extends Component {
   state = {
