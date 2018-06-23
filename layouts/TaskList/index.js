@@ -63,7 +63,7 @@ export default class TaskList extends Component {
 
     return (
       <div className="task-list-panel">
-        <Breadcrumb />
+        <Breadcrumb icon="clock-circle-o" title="定时任务" />
         {/* <div className="page-wrapper">
           <div className="page-wrapper-body">
             <Row>
