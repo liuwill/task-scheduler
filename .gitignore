@@ -5,3 +5,4 @@ yarn-error.log
 .vscode
 .env
 now.json
+ignore

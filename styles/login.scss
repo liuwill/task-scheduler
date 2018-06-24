@@ -45,8 +45,9 @@ body {
   align-items: center;
 }
 .site-avatar {
-  padding: 10px 16px;
-  height: 32px;
+  padding: 10px 16px 0;
+  height: auto;
+  display: block;
   background: #343434;
 }
 .site-avatar>svg {

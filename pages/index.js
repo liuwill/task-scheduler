@@ -5,6 +5,7 @@ import NavHeader from '../components/NavHeader'
 import Layout from '../components/Layout'
 import TaskList from '../layouts/TaskList'
 import axios from 'axios'
+import '../styles/common.scss'
 
 export default class Index extends Component {
   static geInitialProps({ req }) {

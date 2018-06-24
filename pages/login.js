@@ -1,5 +1,6 @@
 import React from 'react' // eslint-disable-line
 import { withRouter } from 'next/router'
+// import '../styles/common.scss'
 import '../styles/login.scss'
 
 import { Form, Input, message, Button, Select } from 'antd'
@@ -21,13 +22,17 @@ class Login extends React.Component {
         return
       }
 
-      message.info('Just Login')
+      message.success('Just Login')
     })
   }
 
   render() {
     const { getFieldDecorator } = this.props.form
-    const hostConfig = []
+    const hostConfig = {
+      local: {
+        title: '本机'
+      }
+    }
     return (
       <Form onSubmit={this.handleLogin} className="login-form login-main">
         <div className="top-bar">
