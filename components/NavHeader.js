@@ -6,7 +6,7 @@ export default class SidePanel extends Component {
     return (
       <div className="header">
         <div className="header-nav">
-          <div className="nav-logo">LiuWill</div>
+          <div className="nav-logo">Cronus</div>
         </div>
       </div>
     )

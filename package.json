@@ -20,6 +20,7 @@
   "author": "liuwill<liuwill@live.com>",
   "license": "MIT",
   "dependencies": {
+    "@zeit/next-sass": "^0.2.0",
     "antd": "^3.6.2",
     "axios": "^0.18.0",
     "babel-plugin-import": "^1.7.0",
@@ -30,6 +31,7 @@
     "koa-connect": "^2.0.1",
     "koa-router": "^7.4.0",
     "next": "^6.0.3",
+    "node-sass": "^4.9.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
   },
