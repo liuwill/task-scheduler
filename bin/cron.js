@@ -6,7 +6,7 @@ const logger = {
   info() {
     const args = [].slice.call(arguments)
     const targetArgs = args.map(item => {
-      if (typeof item === 'object' && item !== null){
+      if (typeof item === 'object' && item !== null) {
         return JSON.stringify(item)
       }
       return item
@@ -16,7 +16,7 @@ const logger = {
   }
 }
 
-const parseRuleString = function(rule) {
+const parseRuleString = function (rule) {
   const secondMark = ['分钟', '小时', '天', '月', '年']
   const ruleItem = rule.split(' ')
 
@@ -25,7 +25,7 @@ const parseRuleString = function(rule) {
     if (item === '*') return
 
     const intervalItem = item.split('/')
-    if (!intervalItem || intervalItem.length != 2) return
+    if (!intervalItem || intervalItem.length !== 2) return
 
     intervals.push(`${intervalItem[1]}${secondMark[index]}`)
   })
@@ -42,7 +42,7 @@ const parseRule = function (rule) {
     if (item === '*') return
 
     const intervalItem = item.split('/')
-    if (!intervalItem || intervalItem.length != 2) return
+    if (!intervalItem || intervalItem.length !== 2) return
 
     interval += intervalItem[1] * secondMark[index]
   })
@@ -52,8 +52,8 @@ const parseRule = function (rule) {
 
 const filterJobParam = (obj, fields) => {
   const result = {}
-  for(const key in obj) {
-    if (fields.indexOf(key) >= 0){
+  for (const key in obj) {
+    if (fields.indexOf(key) >= 0) {
       result[key] = obj[key]
     }
   }
@@ -204,7 +204,7 @@ class TaskMonitor extends Emitter {
 
     const storedTaskStr = await redis.hget('store:task:jobs', jobId)
     let storedTask = {}
-    if (storedTaskStr){
+    if (storedTaskStr) {
       storedTask = JSON.parse(storedTaskStr)
     }
     const taskData = this._localJobs[jobId]
@@ -229,6 +229,7 @@ class TaskMonitor extends Emitter {
   }
 
   clear() {
+    const redis = this._redis
     return redis.del('store:task:jobs')
   }
 }
@@ -299,7 +300,7 @@ const generateUniqueId = () => {
   const inc = parseInt(Math.random() * 1000000)
   // Math.random().toString(36).substr(2, 6)
 
-  var buffer = new Buffer(12)
+  var buffer = Buffer.from(12) // new Buffer(12)
   // Encode time
   buffer[3] = time & 0xff
   buffer[2] = (time >> 8) & 0xff

@@ -95,6 +95,6 @@ app.prepare()
           console.log([(new Date()).toISOString(), 'report', 'task monitor execute'].join('\t'))
         })
       } catch (err) { }
-      console.log(`> Ready on http://localhost:${port}`)
+      console.log(`🌍🚀> Ready on http://localhost:${port}`)
     })
   })
